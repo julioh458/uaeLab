@@ -1,6 +1,7 @@
-document.querySelector(".menu-btn").addEventListener("click", () => {
-  document.querySelector(".nav-menu").classList.toggle("show");
-})
+
+document.querySelector(".arrow-btn").addEventListener("click", () => {
+  window.open(`../html/biblioteca.html`,"_self");
+});
 
 
 const stringToHTML = (s) => {
@@ -28,28 +29,35 @@ const renderItem = (item) => {
 window.onload = () => {
 
 
+  //Obteniendo valores de la url     
+  const valores = window.location.search;
+
+  //Creamos la instancia
+  const urlParams = new URLSearchParams(valores);
+
+  //Accedemos a los valores
+  let buscar = urlParams.get('nombre');
 
   
+  fetch(`https://serverless-julio458h-gmailcom.vercel.app/api/biblioteca/${buscar}`)
+  .then(response => response.json())
+  .then(data => {
+
+    const biblio = document.getElementById('cardsID');
+    const template = data.map(renderItem);
+    template.forEach(element => biblio.appendChild(element));
+    console.log(data);
+
+  })
+  
+
 
   const submit = document.getElementById("aceptar");
   
   submit.addEventListener("click", () =>{
     const valores = document.getElementById("busc").value;
     window.open(`../html/bibliotecabuscar.html?nombre=${valores}`,"_self");
-  });
-
-  
-    fetch(`https://serverless-julio458h-gmailcom.vercel.app/api/biblioteca/`)
-    .then(response => response.json())
-    .then(data => {
-
-      const biblio = document.getElementById('cardsID');
-      const template = data.map(renderItem);
-      template.forEach(element => biblio.appendChild(element));
-      console.log(data);
-
-    })
-  
+  }); 
   
 
 }

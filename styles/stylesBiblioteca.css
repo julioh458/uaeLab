@@ -29,7 +29,7 @@ body {
 }
 
 #topic-top {
-  font-size: 190%;
+  font-size: 200%;
   color: #ffffff;
   position: fixed;
   width: auto;
@@ -55,8 +55,9 @@ body {
   height: 15%;
   margin-left: 1%;
   margin-right: 1%;
-  margin-top: 2%;
+  margin-top: 3%;
   padding: 1% 1% 1% 1% ;
+  display: inline;
 }
 
 #busc{
@@ -66,6 +67,7 @@ body {
   font-size: 90%;
   padding-left: 2%;
   border-style: ridge;
+  margin-left: 1%;
 }
 
 #aceptar{
@@ -81,18 +83,29 @@ body {
   border-radius: 25px;
 }
 
-#agregar{
-  width: 15%;
-  height: 50%;
+
+.agregar{
+  width: 7%;
   background-color: #ff6600;
   color: #fff;
   font-family: "Oswald", sans-serif;
   cursor: pointer;
-  font-size: 90%;
+  font-size: 120%;
   text-decoration: solid;
   border-color: #fff;
   border-radius: 25px;
-  margin-top: 2%;
+  margin-top: 0%;
+  padding-left: 1%;
+  padding-bottom: 0.3%;
+  padding-top: 0%;
+  display: inline;
+  float: right;
+  margin-right: 1%;
+}
+
+.agregar a:hover{
+  text-decoration: solid;
+  color: #fff;
 }
 
 
@@ -148,6 +161,21 @@ ul {
 
 
 
+/* Responsive Button */
+.arrow-btn {
+  cursor: pointer;
+  position: fixed;
+  padding-left: 1%;
+  padding-top: 0.2%;
+  padding-bottom: 1%;
+  color: #ffffff;
+  font-size: 25px;
+  
+}
+
+
+
+
   .menu-btn:hover {
     opacity: 0.5;
   }
@@ -194,7 +222,7 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 45px;
     gap: 25px;
     cursor: pointer;
   }
@@ -305,18 +333,29 @@ ul {
     border-radius: 25px;
   }
   
-  #agregar{
-    width: 15%;
-    height: 50%;
+
+  .agregar{
+    width: 11%;
     background-color: #ff6600;
     color: #fff;
     font-family: "Oswald", sans-serif;
     cursor: pointer;
-    font-size: 90%;
+    font-size: 105%;
     text-decoration: solid;
     border-color: #fff;
     border-radius: 25px;
-    margin-top: 2%;
+    margin-top: 0%;
+    padding-left: 2%;
+    padding-bottom: 0.3%;
+    padding-top: 0%;
+    display: inline;
+    float: right;
+    margin-right: 2%;
+  }
+  
+  .agregar a:hover{
+    text-decoration: solid;
+    color: #fff;
   }
   
   
@@ -365,6 +404,20 @@ ul {
     padding-top: 1%;
     padding-bottom: 0%;
     color: #ffffff;
+    
+  }
+
+
+
+  /* Responsive Button */
+  .arrow-btn {
+    cursor: pointer;
+    position: fixed;
+    padding-left: 2%;
+    padding-top: 0.1%;
+    padding-bottom: 0%;
+    color: #ffffff;
+    font-size: 30px;
     
   }
 
@@ -535,18 +588,29 @@ ul {
     border-radius: 25px;
   }
   
-  #agregar{
-    width: 30%;
-    height: 50%;
+
+
+  .agregar{
+    width: 25%;
     background-color: #ff6600;
     color: #fff;
     font-family: "Oswald", sans-serif;
     cursor: pointer;
-    font-size: 90%;
+    font-size: 120%;
     text-decoration: solid;
     border-color: #fff;
     border-radius: 25px;
-    margin-top: 2%;
+    margin: 2% 6% 2% 70%;
+    padding-bottom: 0.3%;
+    padding-top: 0%;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+
+  
+  .agregar a:hover{
+    text-decoration: solid;
+    color: #fff;
   }
   
   
@@ -596,6 +660,20 @@ ul {
     color: #ffffff;
     
   }
+
+
+
+  .arrow-btn {
+    cursor: pointer;
+    position: fixed;
+    padding-left: 3%;
+    padding-top: 0.2%;
+    padding-bottom: 0%;
+    color: #ffffff;
+    font-size: 25px;
+    
+  }
+
 
 
 

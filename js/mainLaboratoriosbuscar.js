@@ -1,3 +1,7 @@
+document.querySelector(".arrow-btn").addEventListener("click", () => {
+  window.open(`../html/laboratorios.html`,"_self");
+});
+
 
 const stringToHTML = (s) => {
   const parser = new DOMParser();
@@ -19,21 +23,19 @@ const renderItem = (item) => {
 
 window.onload = () => {
 
-  
-  document.querySelector(".menu-btn").addEventListener("click", () => {
-    document.querySelector(".nav-menu").classList.toggle("show");
-  });
 
 
-  const submit = document.getElementById("aceptar");
-  
-  submit.addEventListener("click", () =>{
-    const valores = document.getElementById("busc").value;
-    window.open(`../html/laboratoriosbuscar.html?nombre=${valores}`,"_self");
-  });
+  //Obteniendo valores de la url     
+  const valores = window.location.search;
+
+  //Creamos la instancia
+  const urlParams = new URLSearchParams(valores);
+
+  //Accedemos a los valores
+  window.buscar = urlParams.get('nombre');
 
 
-  fetch('https://serverless-julio458h-gmailcom.vercel.app/api/asignaturas')
+  fetch(`https://serverless-julio458h-gmailcom.vercel.app/api/asignaturas/nombre/${buscar}`)
        .then(response => response.json())
        .then(data => {
          const asignaturas = document.getElementById('cardsID');
@@ -43,6 +45,12 @@ window.onload = () => {
          console.log(data);
        });
 
+       const submit = document.getElementById("aceptar");
+  
+       submit.addEventListener("click", () =>{
+         const valores = document.getElementById("busc").value;
+         window.open(`../html/laboratoriosbuscar.html?nombre=${valores}`,"_self");
+       }); 
        
 
 };
