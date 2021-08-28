@@ -9,13 +9,39 @@ const renderItem = (item) => {
   const elemento =  stringToHTML(`<div data-id="${item._id}"> <h2> ${item.nombre} </h2></div>`);
 
 
+
+
   elemento.addEventListener("click", () => {
-    console.log(item);
-    window.open(`../html/guias.html?asignatura=${item.asignatura_id}&lab=${item._id}`,"_self");
-  });
+        
+
+    Swal.fire({
+      title: `${item.nombre}`,
+      showDenyButton: true,
+      showCancelButton: true,
+      showCloseButton: true,
+      confirmButtonText: `Editar`,
+      denyButtonText: `Eliminar`,
+      cancelButtonText: 'Cancelar',
+      footer: `<a class="url" href="../html/guias.html?asignatura=${item.asignatura_id}&lab=${item._id}" target="_self">Entrar</a>`,
+    }).then((result) => {
+      console.log(result);
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        window.open(`../html/materialBiblioteca.html?material=${item._id}`, "_self")
+      } else if (result.isDenied) {
+        Swal.fire('Material eliminado', '', 'info')
+      } 
+    })
+
+  })
 
   return elemento;
 };
+
+document.querySelector("#agregar").addEventListener("click", () => {
+  window.open(`../html/materialLabs.html?asignatura=${asignatura}`,"_self");
+});
+
 
 window.onload = () => {
 
@@ -31,7 +57,7 @@ window.onload = () => {
   const urlParams = new URLSearchParams(valores);
 
   //Accedemos a los valores
-  let asignatura = urlParams.get('asignatura');
+  window.asignatura = urlParams.get('asignatura');
 
   fetch(`https://serverless-julio458h-gmailcom.vercel.app/api/laboratorios/${asignatura}`)
        .then(response => response.json())

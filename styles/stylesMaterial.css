@@ -92,6 +92,7 @@
   
   .form1{
 	  margin-top: 10%;
+	  margin-bottom: 0%;
   }
   
   .form1 input,
@@ -141,13 +142,17 @@
 	  width: 5%;
 	  display:inline-block;
   }
+
+
+
+
   
   #guardar{
 	  background-color: #ff6600;
 	  border-style: none;
 	  font-size: 130%;
 	  width: 30%;
-	  margin-top: 10%;
+	  margin-top: 13%;
 	  margin-left: 65%;
 	  padding: 2% 2% 2% 2%;
 	  border-radius: 25px;
@@ -293,6 +298,9 @@
 	  a:hover{
 		text-decoration: solid;
 		color: #ff6600;
+	  }
+	  .error h1{
+		  color: red;
 	  }
 	  
 	  /*Lista*/
@@ -601,6 +609,9 @@
 	  width: 5%;
 	  display:inline-block;
   }
+
+
+
 
 #guardar{
 	background-color: #ff6600;

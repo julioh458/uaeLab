@@ -48,15 +48,20 @@
         <input id="nombre" type="text" class="input">
 
         <label for="img" class="la">Imagen:</label>
-        <input id="img" type="file" class="input">
+        <input id="img" type="file" accept="image/*" class="input">
 
       </div>
 
       <div class="check">
-        <input type="checkbox" id="cbox1" value="mecanica"><label>Ingenieria Mecanica</label>
-        <input type="checkbox" id="cbox2" value="electrica"><label>Ingenieria Electrica</label>
-        <input type="checkbox" id="cbox3" value="computacion"><label>Ingenieria en Computación</label>
-        
+        <input type="checkbox" id="cbox1" name="list" value="Ing. Mecanica"><label>Ingenieria Mecanica</label>
+        <input type="checkbox" id="cbox2" name="list" value="Ing. Electrica"><label>Ingenieria Electrica</label>
+        <input type="checkbox" id="cbox3" name="list" value="Ing. en Computacion"><label>Ingenieria en Computación</label>
+        <input type="checkbox" id="cbox4" name="list" value="Ing. Industrial"><label>Ingenieria Industrial</label>
+        <input type="checkbox" id="cbox5" name="list" value="Ing. Civil"><label>Ingenieria Civil</label>
+        <input type="checkbox" id="cbox6" name="list" value="Arquitectura"><label>Arquitectura</label>
+        <input type="checkbox" id="cbox7" name="list" value="Diseño Ambiental"><label>Diseño Ambiental</label>
+        <input type="checkbox" id="cbox8" name="list" value="Admin. de Empresas"><label>Administración de empresas</label>
+        <input type="checkbox" id="cbox9" name="list" value="Mercadeo"><label>Mercadeo</label>
         </div>
 
       <input id="guardar" type="submit" class="button" value="Guardar">
@@ -68,6 +73,7 @@
   <!-- Scroll Reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="../js/mainMaterialLaboratorio.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </body>
 
 </html>

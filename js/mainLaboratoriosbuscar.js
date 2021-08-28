@@ -15,8 +15,32 @@ const renderItem = (item) => {
 
   elemento.addEventListener("click", () => {
     console.log(item);
-    window.open(`../html/labs.html?asignatura=${item._id}`,"_self");
+    window.open(``,"_self");
   });
+
+  elemento.addEventListener("click", () => {
+        
+
+    Swal.fire({
+      title: `${item.nombre}`,
+      showDenyButton: true,
+      showCancelButton: true,
+      showCloseButton: true,
+      confirmButtonText: `Editar`,
+      denyButtonText: `Eliminar`,
+      cancelButtonText: 'Cancelar',
+      footer: `<a class="url" href="../html/labs.html?asignatura=${item._id}" target="_self">Entrar</a>`,
+    }).then((result) => {
+      console.log(result);
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        window.open(`../html/materialBiblioteca.html?material=${item._id}`, "_self")
+      } else if (result.isDenied) {
+        Swal.fire('Material eliminado', '', 'info')
+      } 
+    })
+
+  })
 
   return elemento;
 };

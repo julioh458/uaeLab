@@ -43,27 +43,31 @@
     <div id="form" class="login-form">
 
       <div class="form1">
+        
 
         <label for="nombre" class="la">Nombre:</label>
-        <input id="nombre" type="text" class="input">
+        <input id="nombre" type="text" class="input" required>
 
         <label for="categoria" class="la">Categoria:</label>
-        <select id="categoria" class="input">
-          <option>-Seleccionar-</option>
+        <select id="categoria" class="input" required>
+          <option value="" >--Seleccionar--</option>
+          <option value="Trabajo de graduación">Trabajo de Graduación</option>
           <option value="Libro">Libro</option>
-          <option value="Trabaj de graduación">Trabajo de Graduación</option>
         </select>
       
         <label for="año" class="last">Año:</label>
-        <input id="año" type="text" class="input">
+        <input id="año" type="text" class="input" required>
       
         
         <label for="file" class="last">Archivo:</label>
-        <input id="filee" type="file" class="input" value="Examinar...">
-      
+        
+        <input id="fileID" type="file" class="input" name="file" value="Examinar..." accept=".pdf"  required>
+        
       </div>
 
       <input id="guardar" type="submit" class="button" value="Guardar">
+    
+
     </div>
   </div>
 

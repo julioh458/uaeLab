@@ -198,6 +198,23 @@ ul {
   }
 
 
+
+  .url{
+    width: 20%;
+    background-color:#ff6600;
+    color:#fff;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .url:hover{
+    color: #fff;
+  }
+
+
   .cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -438,6 +455,22 @@ ul {
 
   .nav-main ul.nav-menu-right {
     margin-right: 50px;
+  }
+
+
+  .url{
+    width: 20%;
+    background-color:#ff6600;
+    color:#fff;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .url:hover{
+    color: #fff;
   }
 
   .cards{
@@ -683,6 +716,22 @@ ul {
 
   .nav-main ul.nav-menu-right {
     margin-right: 50px;
+  }
+
+
+  .url{
+    width: 20%;
+    background-color:#ff6600;
+    color:#fff;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .url:hover{
+    color: #fff;
   }
 
   .cards{
